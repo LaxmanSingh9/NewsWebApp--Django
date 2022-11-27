@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Optional theme -->
+  </head>
+<body>
+    <div class="jumbotron" style="color:black">
+
+      <h1 style ="color:white"></h1>
+         MY NEWS WEBSITE
+
+    </div>
+
+
+    <div class="container" align-items="center">
+      {% for new, des, i,content in mylist %}
+              <img src="{{ i }}" width="300" height="300" alt="">
+              <h2>news:</h2> {{ new }}
+                {{ value|linebreaks }}
+
+              <h4>description:</h4>{{ des }}
+               {{ value|linebreaks }}
+              <h5>Content:</h5>{{content}}
+                {{value|linebreaks}}
+             <hr size="14" noshade/>
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
